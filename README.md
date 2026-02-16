@@ -70,15 +70,6 @@ The update is broadcast to all connected clients viewing the same board.
 -   Axios
 -   react-hot-toast
 
-------------------------------------------------------------------------
-
-# 📂 Project Structure
-
-task-collab-platform/ │ ├── backend/ │ ├── src/ │ │ ├── config/ │ │ ├──
-models/ │ │ ├── controllers/ │ │ ├── services/ │ │ ├── routes/ │ │ ├──
-middleware/ │ │ ├── websocket/ │ │ └── server.js │ ├── frontend/ │ ├──
-src/ │ │ ├── components/ │ │ ├── pages/ │ │ ├── services/ │ │ ├── store/
-│ │ ├── styles/ │ │ ├── App.jsx │ │ └── main.jsx │ └── docs/
 
 ------------------------------------------------------------------------
 
