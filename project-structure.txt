@@ -1,0 +1,28 @@
+task-collab-platform/
+├── backend/
+│   ├── src/
+│   │   ├── config/
+│   │   ├── models/
+│   │   ├── controllers/
+│   │   ├── routes/
+│   │   ├── middleware/
+│   │   ├── services/
+│   │   ├── websocket/
+│   │   └── server.js
+│   ├── package.json
+│   └── .env.example
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── store/
+│   │   ├── hooks/
+│   │   └── App.jsx
+│   ├── package.json
+│   └── index.html
+├── docs/
+│   ├── architecture.md
+│   ├── api-contract.md
+│   └── database-schema.md
+└── README.md
