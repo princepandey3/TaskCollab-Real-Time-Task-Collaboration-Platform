@@ -1,9 +1,8 @@
 # TaskCollab – Real-Time Task Collaboration Platform
 
-TaskCollab is a full-stack real-time task management platform inspired by tools like Trello and Notion.  
-It allows users to create boards, manage lists and tasks, assign members, and see updates instantly using WebSockets.
+TaskCollab is a full-stack real-time collaboration platform inspired by modern productivity and workflow management tools. It enables teams to create project boards, structure work into customizable lists, manage tasks efficiently, assign members, set priorities and deadlines, and track activity seamlessly.
 
-This project was built to understand real-time architecture, scalable backend design, authentication systems, and modern frontend state management.
+The platform leverages WebSocket-based real-time synchronization to ensure that updates—such as task movements, edits, or assignments—are instantly reflected across all connected users. Built with scalability and clean architecture in mind, TaskCollab demonstrates secure authentication, efficient state management, optimized database design, and a responsive user experience suitable for production-grade collaborative systems.
 
 ---
 
@@ -105,7 +104,7 @@ The frontend uses a centralized state store for consistent UI updates.
 git clone <repository-url>
 cd task-collab-platform
 
-2️⃣ Backend Setup
+### 2️⃣ Backend Setup
 
 cd backend
 npm install
@@ -116,7 +115,7 @@ npm run dev
 Backend runs at:
 http://localhost:5000
 
-3️⃣ Frontend Setup
+### 3️⃣ Frontend Setup
 
 cd frontend
 npm install
@@ -125,7 +124,7 @@ npm run dev
 Frontend runs at:
 http://localhost:5173
 
-🔄 Real-Time Communication
+### 🔄 Real-Time Communication
 
 The frontend connects to the backend WebSocket server using a JWT token.
 
@@ -143,7 +142,7 @@ An event is broadcast to all connected users viewing that board.
 
 This ensures real-time synchronization across clients.
 
-🔐 Security
+### 🔐 Security
 
 Password hashing with bcrypt
 
@@ -159,6 +158,6 @@ NoSQL injection prevention
 
 XSS protection
 
-📄 License
+### 📄 License
 MIT License
 ```
