@@ -1,163 +1,182 @@
-# TaskCollab – Real-Time Task Collaboration Platform
+# 🚀 TaskCollab -- Real-Time Task Collaboration Platform
 
-TaskCollab is a full-stack real-time collaboration platform inspired by modern productivity and workflow management tools. It enables teams to create project boards, structure work into customizable lists, manage tasks efficiently, assign members, set priorities and deadlines, and track activity seamlessly.
+TaskCollab is a **production-ready full-stack real-time collaboration
+platform** designed for modern teams. Inspired by tools like Trello and
+Jira, it enables teams to manage projects using boards, lists, and tasks
+--- all synchronized instantly using WebSockets.
 
-The platform leverages WebSocket-based real-time synchronization to ensure that updates—such as task movements, edits, or assignments—are instantly reflected across all connected users. Built with scalability and clean architecture in mind, TaskCollab demonstrates secure authentication, efficient state management, optimized database design, and a responsive user experience suitable for production-grade collaborative systems.
+Built with scalability, clean architecture, and performance in mind,
+TaskCollab demonstrates modern full-stack engineering practices
+including:
 
----
+-   Real-time synchronization
+-   Secure JWT authentication
+-   Optimistic UI updates
+-   Clean backend architecture
+-   Efficient MongoDB schema design
+-   Centralized frontend state management
 
-## 🚀 Features
+------------------------------------------------------------------------
 
-### Core Features
+# ✨ Features
 
-- User authentication (JWT-based login & registration)
-- Create, update, delete boards
-- Multiple lists inside each board
-- Create and manage tasks within lists
-- Drag and drop tasks between lists
-- Assign multiple users to tasks
-- Task priorities and due dates
-- Activity history tracking
-- Search and pagination
-- Real-time updates across connected users
+## 🧩 Core Functionality
 
-### Technical Highlights
+-   🔐 JWT-based authentication (Login / Register)
+-   📋 Create, edit, and delete project boards
+-   🗂️ Multiple customizable lists per board
+-   📝 Create, update, delete tasks
+-   🔄 Drag & Drop tasks between lists
+-   👥 Assign multiple users to tasks
+-   ⏰ Due dates & priority levels
+-   📜 Activity history tracking
+-   🔍 Search functionality
+-   📄 Pagination support
+-   ⚡ Real-time updates across connected users
 
-- WebSocket-based live updates
-- RESTful API design
-- Optimistic UI updates
-- Zustand for global state management
-- Clean backend architecture (controllers + services)
-- MongoDB indexing and TTL for activity logs
-- Responsive UI
+------------------------------------------------------------------------
 
----
+# ⚡ Real-Time Collaboration
 
-## 🏗️ Tech Stack
+TaskCollab uses **WebSocket (`ws`)** to provide instant synchronization.
 
-### Backend
+Whenever a user: - Creates a task - Updates a task - Moves a task -
+Deletes a task
 
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- WebSocket (`ws`)
-- JWT Authentication
-- bcrypt for password hashing
+The update is broadcast to all connected clients viewing the same board.
 
-### Frontend
+------------------------------------------------------------------------
 
-- React 18
-- Vite
-- Zustand
-- React Router v6
-- react-beautiful-dnd
-- Axios
-- react-hot-toast
+# 🏗️ Tech Stack
 
----
+## 🖥 Backend
 
-## 📂 Project Structure
+-   Node.js
+-   Express.js
+-   MongoDB
+-   Mongoose
+-   WebSocket (`ws`)
+-   JWT Authentication
+-   bcrypt
+-   MVC Architecture (Controllers + Services Pattern)
 
-task-collab-platform/
-├── backend/
-│ ├── src/
-│ │ ├── config/
-│ │ ├── models/
-│ │ ├── controllers/
-│ │ ├── routes/
-│ │ ├── middleware/
-│ │ ├── services/
-│ │ ├── websocket/
-│ │ └── server.js
-│
-├── frontend/
-│ ├── src/
-│ │ ├── components/
-│ │ ├── pages/
-│ │ ├── services/
-│ │ ├── store/
-│ │ ├── styles/
-│ │ ├── App.jsx
-│ │ └── main.jsx
-│
-└── docs
+## 💻 Frontend
 
-The backend separates business logic from controllers for maintainability.  
-The frontend uses a centralized state store for consistent UI updates.
+-   React 18
+-   Vite
+-   Zustand (Global State)
+-   React Router v6
+-   react-beautiful-dnd
+-   Axios
+-   react-hot-toast
 
----
+------------------------------------------------------------------------
 
-## ⚙️ Getting Started
+# 📂 Project Structure
 
-### Prerequisites
+task-collab-platform/ │ ├── backend/ │ ├── src/ │ │ ├── config/ │ │ ├──
+models/ │ │ ├── controllers/ │ │ ├── services/ │ │ ├── routes/ │ │ ├──
+middleware/ │ │ ├── websocket/ │ │ └── server.js │ ├── frontend/ │ ├──
+src/ │ │ ├── components/ │ │ ├── pages/ │ │ ├── services/ │ │ ├── store/
+│ │ ├── styles/ │ │ ├── App.jsx │ │ └── main.jsx │ └── docs/
 
-- Node.js (v16+)
-- MongoDB (running locally or cloud instance)
-- npm or yarn
+------------------------------------------------------------------------
 
----
+# ⚙️ Getting Started
 
-### 1️⃣ Clone the Repository
+## 📌 Prerequisites
 
-```bash
-git clone <repository-url>
-cd task-collab-platform
+-   Node.js (v16+ recommended)
+-   MongoDB (Local or Atlas)
+-   npm or yarn
 
-### 2️⃣ Backend Setup
+------------------------------------------------------------------------
 
-cd backend
-npm install
-cp .env.example .env
-Start the backend:
+## 1️⃣ Clone Repository
+
+git clone https://github.com/your-username/task-collab-platform.git cd
+task-collab-platform
+
+------------------------------------------------------------------------
+
+## 2️⃣ Backend Setup
+
+cd backend npm install cp .env.example .env
+
+### Configure .env
+
+PORT=5000 MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_super_secret_key CLIENT_URL=http://localhost:5173
+
+### Run Backend
+
 npm run dev
 
-Backend runs at:
-http://localhost:5000
+Backend runs at: http://localhost:5000
 
-### 3️⃣ Frontend Setup
+------------------------------------------------------------------------
 
-cd frontend
-npm install
-npm run dev
+## 3️⃣ Frontend Setup
 
-Frontend runs at:
-http://localhost:5173
+cd frontend npm install npm run dev
 
-### 🔄 Real-Time Communication
+Frontend runs at: http://localhost:5173
 
-The frontend connects to the backend WebSocket server using a JWT token.
+------------------------------------------------------------------------
 
-When users:
+# 🔐 Security Implementation
 
-Create a task
+-   bcrypt password hashing
+-   JWT-based authentication
+-   Protected API routes
+-   Role-based access validation
+-   Input validation middleware
+-   MongoDB indexing for performance
+-   TTL indexes for automatic activity log cleanup
+-   CORS configuration
+-   NoSQL injection prevention
+-   Basic XSS protection
 
-Update a task
+------------------------------------------------------------------------
 
-Move a task
+# 🧠 Architecture Highlights
 
-Delete a task
+### Backend Design
 
-An event is broadcast to all connected users viewing that board.
+-   MVC + Service Layer pattern
+-   Business logic separated from controllers
+-   Scalable folder structure
+-   WebSocket event broadcasting system
+-   MongoDB indexing for optimized queries
 
-This ensures real-time synchronization across clients.
+### Frontend Design
 
-### 🔐 Security
+-   Zustand centralized global store
+-   Optimistic UI updates for smooth UX
+-   Modular component architecture
+-   Clean separation between API services & UI
 
-Password hashing with bcrypt
+------------------------------------------------------------------------
 
-JWT authentication
+# 🚀 Future Improvements
 
-Protected routes
+-   Role-based permissions (Admin, Member, Viewer)
+-   File attachments for tasks
+-   Comments system
+-   Email notifications
+-   Redis for WebSocket scaling
+-   Docker containerization
+-   CI/CD pipeline
 
-Input validation middleware
+------------------------------------------------------------------------
 
-CORS configuration
+# 📄 License
 
-NoSQL injection prevention
+MIT License © 2026
 
-XSS protection
+------------------------------------------------------------------------
 
-### 📄 License
-MIT License
-```
+# 👨‍💻 Author
+
+Prince Pandey\
+B.Tech CSE IIIT KOTA | Full Stack Developer
